@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Botanical Editorial palette */
+  --ivory: #FAF8F3;
+  --ivory-deep: #F1EDE2;
+  --ink: #1B2B22;
+  --ink-soft: #24372B;
+  --ink-card: #2C4133;
+  --sage: #7A9B7E;
+  --sage-light: #A6C2A8;
+  --clay: #C76F4D;
+  --clay-light: #DC8A66;
+  --clay-tint: rgba(199, 111, 77, 0.12);
+  --gold: #B8935A;
+
+  --text-primary: #1B2B22;
+  --text-secondary: #545F50;
+  --text-muted: #8B9388;
+  --text-on-dark: #F4F1E8;
+  --text-on-dark-muted: #A8B5A3;
+
+  --border: rgba(27, 43, 34, 0.1);
+  --border-dark: rgba(244, 241, 232, 0.1);
+
+  --radius: 22px;
+  --radius-sm: 12px;
+  --shadow-sm: 0 2px 8px rgba(27, 43, 34, 0.06), 0 8px 24px rgba(27, 43, 34, 0.04);
+  --shadow-md: 0 8px 30px rgba(27, 43, 34, 0.1);
+  --shadow-lg: 0 20px 60px rgba(27, 43, 34, 0.16);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-44px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(44px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: var(--clay);
+  color: var(--ivory);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), background 0.3s ease;
+}
+.btn-primary:hover {
+  background: var(--clay-light);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(199, 111, 77, 0.35);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s var(--ease);
+}
+.btn-outline:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--ivory);
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: transparent;
+  color: var(--text-on-dark);
+  border: 1.5px solid var(--border-dark);
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s var(--ease);
+}
+.btn-outline-light:hover {
+  border-color: var(--sage-light);
+  background: rgba(244, 241, 232, 0.06);
+  transform: translateY(-3px);
+}
+
+/* ---------- Eyebrow label ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1.5px;
+  background: var(--clay);
+}
+
+.eyebrow-light {
+  color: var(--sage-light);
+}
+.eyebrow-light::before {
+  background: var(--sage-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1; transform: none; transition: none;
+  }
+}

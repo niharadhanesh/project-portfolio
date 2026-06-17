@@ -1,0 +1,312 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 120px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(7, 10, 15, 0.96),
+      rgba(7, 10, 15, 0.82),
+      rgba(7, 10, 15, 0.70)
+    ),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2000&q=80");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* Overlay */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,0.05),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+/* Container */
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 80px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Content */
+
+.hero-content {
+  max-width: 820px;
+}
+
+/* Label */
+
+.hero-kicker {
+  display: inline-block;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.65);
+
+  margin-bottom: 28px;
+}
+
+/* Heading */
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.95;
+  font-weight: 800;
+
+  letter-spacing: -4px;
+
+  color: #ffffff;
+
+  margin-bottom: 30px;
+}
+
+.hero-title span {
+  display: block;
+  color: #d8dde7;
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 650px;
+
+  font-size: 1.1rem;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.72);
+
+  margin-bottom: 50px;
+}
+
+/* Buttons */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 16px 34px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.hero-btn-secondary {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffffff;
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Scroll Text */
+
+.hero-scroll {
+  position: absolute;
+
+  right: 50px;
+  bottom: 40px;
+
+  color: rgba(255,255,255,0.35);
+
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  transform: rotate(90deg);
+}
+
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1200px) {
+
+  .hero-container {
+    padding: 0 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+  }
+
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 992px) {
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-container {
+    padding: 0 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .hero-container {
+    padding: 0 24px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-kicker {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 70px;
+  }
+
+  .hero-container {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width: 360px) {
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+}
