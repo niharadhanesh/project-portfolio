@@ -1,56 +1,82 @@
 import "./Hero.css";
+import { FaLinkedinIn, FaGithub, FaGlobe } from "react-icons/fa";
+
+import heroImage from "../assets/images/brush-frame.jpg";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
 
-      <div className="hero-overlay"></div>
+      <div className="hero-wrapper">
 
-      <div className="hero-container">
+        {/* SOCIAL ICONS */}
+        <div className="hero-socials">
 
-        <div className="hero-content">
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn />
+          </a>
 
-          <span className="hero-kicker">
-            PROJECT PORTFOLIO
-          </span>
+          <a
+            href="https://github.com/yourprofile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
 
-          <h1 className="hero-title">
-            Transforming ideas into
-            <span> powerful web applications.</span>
-          </h1>
-
-          <p className="hero-description">
-            Explore a collection of business solutions, healthcare
-            systems, ERP platforms, inventory management tools,
-            billing applications, and custom web products designed
-            to solve real-world challenges through thoughtful
-            software development.
-          </p>
-
-          <div className="hero-actions">
-
-            <a
-              href="#projects"
-              className="hero-btn hero-btn-primary"
-            >
-              View Projects
-            </a>
-
-            <a
-              href="#contact"
-              className="hero-btn hero-btn-secondary"
-            >
-              Contact Me
-            </a>
-
-          </div>
+          <a
+            href="https://yourportfolio.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGlobe />
+          </a>
 
         </div>
 
-      </div>
+        {/* CONTENT */}
+        <div className="hero-content">
 
-      <div className="hero-scroll">
-        Scroll
+          <span className="hero-tag">
+            PROJECT SHOWCASE
+          </span>
+
+          <h1 className="hero-title">
+            Building digital
+            <span>products!</span>
+          </h1>
+
+          <p className="hero-text">
+            Explore innovative web applications,
+            healthcare systems, ERP platforms,
+            inventory solutions and business products
+            crafted with modern technologies.
+          </p>
+
+          <a
+            href="#projects"
+            className="hero-btn"
+          >
+            VIEW PROJECTS
+          </a>
+
+        </div>
+
+        {/* IMAGE */}
+        <div className="hero-image">
+
+          <img
+            src={heroImage}
+            alt="Project Showcase"
+            className="hero-main-image"
+          />
+
+        </div>
+
       </div>
 
     </section>

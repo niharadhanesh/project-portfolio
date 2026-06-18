@@ -17,7 +17,12 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
 
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "projects",
+        "contact",
+      ];
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -31,7 +36,8 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleClick = (e, href) => {
@@ -41,7 +47,9 @@ export default function Navbar() {
 
     document
       .querySelector(href)
-      ?.scrollIntoView({ behavior: "smooth" });
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
   };
 
   return (
@@ -58,7 +66,35 @@ export default function Navbar() {
             Nihara<span>.</span>
           </a>
 
-          <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <button
+            className={`menu-btn ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+        </div>
+
+        {/* Overlay */}
+
+        <div
+          className={`menu-overlay ${
+            menuOpen ? "active" : ""
+          }`}
+          onClick={() => setMenuOpen(false)}
+        />
+
+        {/* Side Menu */}
+
+        <div
+          className={`side-menu ${
+            menuOpen ? "active" : ""
+          }`}
+        >
+          <nav className="side-nav">
+
             {links.map((item) => (
               <a
                 key={item.label}
@@ -68,21 +104,17 @@ export default function Navbar() {
                     ? "active"
                     : ""
                 }
-                onClick={(e) => handleClick(e, item.href)}
+                onClick={(e) =>
+                  handleClick(e, item.href)
+                }
               >
                 {item.label}
               </a>
             ))}
+
           </nav>
 
-          <button
-            className={`menu-btn ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span />
-            <span />
-          </button>
-
+          <div className="side-line" />
         </div>
 
       </header>
