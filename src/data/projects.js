@@ -1,38 +1,56 @@
 export const projects = [
   {
     id: 1,
-    featured: true,
-    category: 'Healthcare Management',
-    title: 'Hospital Management System',
+    category: 'Frontend Development',
+    title: 'Lignora Wooden Craft',
     description:
-      'A scalable hospital web app offering tailored modules for admins, doctors, and receptionists — streamlining patient records, appointments, and staff workflows under one role-based platform.',
-    tech: ['Python', 'Django', 'MySQL', 'Bootstrap', 'REST APIs'],
+      'A modern handcrafted furniture and wooden decor website featuring elegant product showcases, responsive design, and a premium shopping experience.',
+    tech: ['React', 'CSS', 'Responsive UI'],
     live: '#',
     github: '#',
-    accent: '#C76F4D',
   },
+
   {
     id: 2,
-    featured: false,
-    category: 'Business Operations',
+    category: 'Backend Development',
     title: 'Billing Software',
     description:
-      'A system to manage customers, invoices, and communications — with options to add, edit, search, import, export, and send notifications.',
-    tech: ['Django', 'JavaScript', 'PostgreSQL', 'Bootstrap'],
+      'A complete billing and invoicing system with customer management, invoice generation, reporting, and communication modules.',
+    tech: ['Python', 'Django', 'MySQL'],
     live: '#',
     github: '#',
-    accent: '#7A9B7E',
   },
+
   {
     id: 3,
-    featured: false,
-    category: 'Fleet Management',
-    title: 'Smart Vehicle Management Portal',
+    category: 'Backend Development',
+    title: 'Hospital Management System',
     description:
-      'A web application to manage vehicle rentals, services, and users, with separate, secure access for admins.',
-    tech: ['Python', 'Django', 'React', 'MySQL'],
+      'Role-based healthcare management platform for doctors, receptionists, patients, appointments, billing, and reports.',
+    tech: ['Python', 'Django', 'REST API', 'MySQL'],
     live: '#',
     github: '#',
-    accent: '#B8935A',
+  },
+
+  {
+    id: 4,
+    category: 'Backend Development',
+    title: 'Vehicle Rental Platform',
+    description:
+      'Vehicle rental and service management platform with booking workflows, service tracking, billing, and admin controls.',
+    tech: ['Django', 'MySQL', 'Bootstrap'],
+    live: '#',
+    github: '#',
+  },
+
+  {
+    id: 5,
+    category: 'Frontend Development',
+    title: 'Pizza Delivery App',
+    description:
+      'Modern food ordering interface with menu browsing, cart functionality, responsive layouts, and smooth user experience.',
+    tech: ['React', 'CSS', 'JavaScript'],
+    live: '#',
+    github: '#',
   },
 ];

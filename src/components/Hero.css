@@ -54,7 +54,7 @@
   border-radius:50%;
   border:1px solid #c7beb8;
 
-  color:#5f5955;
+  color:#555a5f;
   text-decoration:none;
 
   transition:.3s ease;
@@ -65,7 +65,7 @@
 }
 
 .hero-socials a:hover{
-  background:#5f5955;
+  background:#555a5f;
   color:#fff;
   transform:translateY(-3px);
 }
@@ -87,7 +87,7 @@
 .hero-tag{
   display:inline-block;
 
-  color:#8b837e;
+  color:#2b68b3;
   font-size:.85rem;
   font-weight:600;
 
@@ -98,7 +98,7 @@
 }
 
 .hero-title{
-  color:#4f4a47;
+  color:#474a4f;
 
   font-size:clamp(4rem,6vw,6rem);
   line-height:.95;
@@ -107,13 +107,36 @@
   margin-bottom:25px;
 }
 
+/* Building digital color */
+.hero-title{
+  background:linear-gradient(
+    90deg,
+    #474a4f,
+    #6b7c8f
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Products highlight */
 .hero-title span{
   display:block;
+
+  background:linear-gradient(
+    90deg,
+    #68a1e3,
+    #074c92
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
   font-weight:800;
 }
 
 .hero-text{
-  color:#817973;
+  color:#737881;
   font-size:1rem;
   line-height:1.9;
 
@@ -126,7 +149,7 @@
 
   padding:16px 38px;
 
-  background:#9a928c;
+  background:#68a1e3;
   color:#fff;
 
   border-radius:12px;
@@ -139,7 +162,7 @@
 }
 
 .hero-btn:hover{
-  background:#817973;
+  background:#2175ca;
   transform:translateY(-3px);
 }
 
