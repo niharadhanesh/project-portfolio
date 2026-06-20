@@ -3,6 +3,7 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footer-line"></div>
       <div className="container footer-inner">
         <a href="#home" className="footer-logo">Nihara<span>.</span></a>
         <p className="footer-copy">© {new Date().getFullYear()} Nihara Dhanesh. All rights reserved.</p>
