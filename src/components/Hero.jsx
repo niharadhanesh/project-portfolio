@@ -10,33 +10,36 @@ export default function Hero() {
       <div className="hero-wrapper">
 
         {/* SOCIAL ICONS */}
-        <div className="hero-socials">
+      <div className="hero-socials">
 
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
+  <a
+    href="https://linkedin.com"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="LinkedIn"
+  >
+    <FaLinkedinIn />
+  </a>
 
-          <a
-            href="https://github.com/yourprofile"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a>
+  <a
+    href="https://github.com"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="GitHub"
+  >
+    <FaGithub />
+  </a>
 
-          <a
-            href="https://yourportfolio.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGlobe />
-          </a>
+  <a
+    href="https://nihara-orpin.vercel.app/"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Portfolio"
+  >
+    <FaGlobe />
+  </a>
 
-        </div>
+</div>
 
         {/* CONTENT */}
         <div className="hero-content">
